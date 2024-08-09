@@ -19,5 +19,6 @@ abstract class AppStrings {
   static const String ordersHistory = 'Orders History';
   static const String changeMyInformation = 'Change My Information';
   static const String update = 'Update';
+  static const String userDataUpdatedSuccessFully = 'Data Updated Successfully';
 
 }

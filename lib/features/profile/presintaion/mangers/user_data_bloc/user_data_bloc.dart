@@ -1,6 +1,9 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:internship/core/services/di/service_locator.dart';
+import 'package:internship/core/utils/app_router.dart';
 import 'package:internship/features/auth/data/mdoels/user_sign_up_model/user_sign_up_model.dart';
 import 'package:internship/features/auth/donmain/entityes/user_entity.dart';
 import 'package:internship/features/profile/domain/use_cases/get_user_data_use_case.dart';
@@ -21,6 +24,7 @@ class UserDataBloc extends Bloc<UserDataEvent, UserDataState> {
         started: () {},
         getUserData: () => getUserDataMethod(),
         updateUserData: (userInputDataModel) => updateUserDataMethod(userInputDataModel),
+        signOut: (context) => signOutMethod(context),
       );
     });
   }
@@ -45,5 +49,11 @@ class UserDataBloc extends Bloc<UserDataEvent, UserDataState> {
         emit(UserDataState.updateUserDataFailure(message));
       });
     });
+  }
+
+  signOutMethod(context)async
+  {
+    await Hive.close();
+    Navigator.pushReplacementNamed(context, AppRouters.signInViewRouter);
   }
 }

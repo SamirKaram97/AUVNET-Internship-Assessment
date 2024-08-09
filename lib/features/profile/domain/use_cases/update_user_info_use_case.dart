@@ -13,6 +13,4 @@ class UpdateUserInfoUseCase extends UseCase<UserEntity,UserInputDataModel>
   Future<ApiResult<UserEntity>> call([UserInputDataModel? param]) {
     return userDataRepo.updateUserData(param!);
   }
-
-
 }

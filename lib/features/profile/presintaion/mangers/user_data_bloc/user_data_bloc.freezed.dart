@@ -22,6 +22,7 @@ mixin _$UserDataEvent {
     required TResult Function() getUserData,
     required TResult Function(UserInputDataModel userInputDataModel)
         updateUserData,
+    required TResult Function(dynamic context) signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,6 +30,7 @@ mixin _$UserDataEvent {
     TResult? Function()? started,
     TResult? Function()? getUserData,
     TResult? Function(UserInputDataModel userInputDataModel)? updateUserData,
+    TResult? Function(dynamic context)? signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +38,7 @@ mixin _$UserDataEvent {
     TResult Function()? started,
     TResult Function()? getUserData,
     TResult Function(UserInputDataModel userInputDataModel)? updateUserData,
+    TResult Function(dynamic context)? signOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -44,6 +47,7 @@ mixin _$UserDataEvent {
     required TResult Function(_Started value) started,
     required TResult Function(_GetUserData value) getUserData,
     required TResult Function(_UpdateUserData value) updateUserData,
+    required TResult Function(_SignOut value) signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +55,7 @@ mixin _$UserDataEvent {
     TResult? Function(_Started value)? started,
     TResult? Function(_GetUserData value)? getUserData,
     TResult? Function(_UpdateUserData value)? updateUserData,
+    TResult? Function(_SignOut value)? signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +63,7 @@ mixin _$UserDataEvent {
     TResult Function(_Started value)? started,
     TResult Function(_GetUserData value)? getUserData,
     TResult Function(_UpdateUserData value)? updateUserData,
+    TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -123,6 +129,7 @@ class _$StartedImpl implements _Started {
     required TResult Function() getUserData,
     required TResult Function(UserInputDataModel userInputDataModel)
         updateUserData,
+    required TResult Function(dynamic context) signOut,
   }) {
     return started();
   }
@@ -133,6 +140,7 @@ class _$StartedImpl implements _Started {
     TResult? Function()? started,
     TResult? Function()? getUserData,
     TResult? Function(UserInputDataModel userInputDataModel)? updateUserData,
+    TResult? Function(dynamic context)? signOut,
   }) {
     return started?.call();
   }
@@ -143,6 +151,7 @@ class _$StartedImpl implements _Started {
     TResult Function()? started,
     TResult Function()? getUserData,
     TResult Function(UserInputDataModel userInputDataModel)? updateUserData,
+    TResult Function(dynamic context)? signOut,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -157,6 +166,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(_Started value) started,
     required TResult Function(_GetUserData value) getUserData,
     required TResult Function(_UpdateUserData value) updateUserData,
+    required TResult Function(_SignOut value) signOut,
   }) {
     return started(this);
   }
@@ -167,6 +177,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(_Started value)? started,
     TResult? Function(_GetUserData value)? getUserData,
     TResult? Function(_UpdateUserData value)? updateUserData,
+    TResult? Function(_SignOut value)? signOut,
   }) {
     return started?.call(this);
   }
@@ -177,6 +188,7 @@ class _$StartedImpl implements _Started {
     TResult Function(_Started value)? started,
     TResult Function(_GetUserData value)? getUserData,
     TResult Function(_UpdateUserData value)? updateUserData,
+    TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -232,6 +244,7 @@ class _$GetUserDataImpl implements _GetUserData {
     required TResult Function() getUserData,
     required TResult Function(UserInputDataModel userInputDataModel)
         updateUserData,
+    required TResult Function(dynamic context) signOut,
   }) {
     return getUserData();
   }
@@ -242,6 +255,7 @@ class _$GetUserDataImpl implements _GetUserData {
     TResult? Function()? started,
     TResult? Function()? getUserData,
     TResult? Function(UserInputDataModel userInputDataModel)? updateUserData,
+    TResult? Function(dynamic context)? signOut,
   }) {
     return getUserData?.call();
   }
@@ -252,6 +266,7 @@ class _$GetUserDataImpl implements _GetUserData {
     TResult Function()? started,
     TResult Function()? getUserData,
     TResult Function(UserInputDataModel userInputDataModel)? updateUserData,
+    TResult Function(dynamic context)? signOut,
     required TResult orElse(),
   }) {
     if (getUserData != null) {
@@ -266,6 +281,7 @@ class _$GetUserDataImpl implements _GetUserData {
     required TResult Function(_Started value) started,
     required TResult Function(_GetUserData value) getUserData,
     required TResult Function(_UpdateUserData value) updateUserData,
+    required TResult Function(_SignOut value) signOut,
   }) {
     return getUserData(this);
   }
@@ -276,6 +292,7 @@ class _$GetUserDataImpl implements _GetUserData {
     TResult? Function(_Started value)? started,
     TResult? Function(_GetUserData value)? getUserData,
     TResult? Function(_UpdateUserData value)? updateUserData,
+    TResult? Function(_SignOut value)? signOut,
   }) {
     return getUserData?.call(this);
   }
@@ -286,6 +303,7 @@ class _$GetUserDataImpl implements _GetUserData {
     TResult Function(_Started value)? started,
     TResult Function(_GetUserData value)? getUserData,
     TResult Function(_UpdateUserData value)? updateUserData,
+    TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
     if (getUserData != null) {
@@ -380,6 +398,7 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
     required TResult Function() getUserData,
     required TResult Function(UserInputDataModel userInputDataModel)
         updateUserData,
+    required TResult Function(dynamic context) signOut,
   }) {
     return updateUserData(userInputDataModel);
   }
@@ -390,6 +409,7 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
     TResult? Function()? started,
     TResult? Function()? getUserData,
     TResult? Function(UserInputDataModel userInputDataModel)? updateUserData,
+    TResult? Function(dynamic context)? signOut,
   }) {
     return updateUserData?.call(userInputDataModel);
   }
@@ -400,6 +420,7 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
     TResult Function()? started,
     TResult Function()? getUserData,
     TResult Function(UserInputDataModel userInputDataModel)? updateUserData,
+    TResult Function(dynamic context)? signOut,
     required TResult orElse(),
   }) {
     if (updateUserData != null) {
@@ -414,6 +435,7 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
     required TResult Function(_Started value) started,
     required TResult Function(_GetUserData value) getUserData,
     required TResult Function(_UpdateUserData value) updateUserData,
+    required TResult Function(_SignOut value) signOut,
   }) {
     return updateUserData(this);
   }
@@ -424,6 +446,7 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
     TResult? Function(_Started value)? started,
     TResult? Function(_GetUserData value)? getUserData,
     TResult? Function(_UpdateUserData value)? updateUserData,
+    TResult? Function(_SignOut value)? signOut,
   }) {
     return updateUserData?.call(this);
   }
@@ -434,6 +457,7 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
     TResult Function(_Started value)? started,
     TResult Function(_GetUserData value)? getUserData,
     TResult Function(_UpdateUserData value)? updateUserData,
+    TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
     if (updateUserData != null) {
@@ -450,6 +474,150 @@ abstract class _UpdateUserData implements UserDataEvent {
   UserInputDataModel get userInputDataModel;
   @JsonKey(ignore: true)
   _$$UpdateUserDataImplCopyWith<_$UpdateUserDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignOutImplCopyWith<$Res> {
+  factory _$$SignOutImplCopyWith(
+          _$SignOutImpl value, $Res Function(_$SignOutImpl) then) =
+      __$$SignOutImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic context});
+}
+
+/// @nodoc
+class __$$SignOutImplCopyWithImpl<$Res>
+    extends _$UserDataEventCopyWithImpl<$Res, _$SignOutImpl>
+    implements _$$SignOutImplCopyWith<$Res> {
+  __$$SignOutImplCopyWithImpl(
+      _$SignOutImpl _value, $Res Function(_$SignOutImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? context = freezed,
+  }) {
+    return _then(_$SignOutImpl(
+      freezed == context ? _value.context! : context,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SignOutImpl implements _SignOut {
+  const _$SignOutImpl(this.context);
+
+  @override
+  final dynamic context;
+
+  @override
+  String toString() {
+    return 'UserDataEvent.signOut(context: $context)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignOutImpl &&
+            const DeepCollectionEquality().equals(other.context, context));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(context));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignOutImplCopyWith<_$SignOutImpl> get copyWith =>
+      __$$SignOutImplCopyWithImpl<_$SignOutImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserData,
+    required TResult Function(UserInputDataModel userInputDataModel)
+        updateUserData,
+    required TResult Function(dynamic context) signOut,
+  }) {
+    return signOut(context);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserData,
+    TResult? Function(UserInputDataModel userInputDataModel)? updateUserData,
+    TResult? Function(dynamic context)? signOut,
+  }) {
+    return signOut?.call(context);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserData,
+    TResult Function(UserInputDataModel userInputDataModel)? updateUserData,
+    TResult Function(dynamic context)? signOut,
+    required TResult orElse(),
+  }) {
+    if (signOut != null) {
+      return signOut(context);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetUserData value) getUserData,
+    required TResult Function(_UpdateUserData value) updateUserData,
+    required TResult Function(_SignOut value) signOut,
+  }) {
+    return signOut(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetUserData value)? getUserData,
+    TResult? Function(_UpdateUserData value)? updateUserData,
+    TResult? Function(_SignOut value)? signOut,
+  }) {
+    return signOut?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetUserData value)? getUserData,
+    TResult Function(_UpdateUserData value)? updateUserData,
+    TResult Function(_SignOut value)? signOut,
+    required TResult orElse(),
+  }) {
+    if (signOut != null) {
+      return signOut(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SignOut implements UserDataEvent {
+  const factory _SignOut(final dynamic context) = _$SignOutImpl;
+
+  dynamic get context;
+  @JsonKey(ignore: true)
+  _$$SignOutImplCopyWith<_$SignOutImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
