@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:internship/core/errors/failures.dart';
 import 'package:internship/core/services/networking/api_result.dart';
+import 'package:internship/core/utils/funcations/save_user_data_to_hive.dart';
 import 'package:internship/features/auth/data/data_sources/remote_data_source.dart';
 import 'package:internship/features/auth/data/mdoels/user_sign_up_model/user_sign_up_model.dart';
 import 'package:internship/features/auth/donmain/entityes/user_entity.dart';
@@ -30,7 +31,8 @@ class AuthRepoImpl extends AuthRepo {
   Future<ApiResult<UserEntity>> signUp(
       {required UserInputDataModel userSignUpModel}) async {
     try {
-      var result = await remoteDataSource.signUp(userSignUpModel);
+      UserEntity result = await remoteDataSource.signUp(userSignUpModel);
+      await saveUserDataToHive(result);
       return ApiResult.success(result);
     } catch (e) {
       if (e is DioException) {

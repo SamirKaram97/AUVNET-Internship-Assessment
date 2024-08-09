@@ -13,6 +13,6 @@ class GetOrdersHistoryUseCase extends UseCase <List<OrderHistoryEntity>,NoParam>
 
   @override
   Future<ApiResult<List<OrderHistoryEntity>>> call([NoParam? param]) {
-    return orderHistoryRepo.getUserData();
+    return orderHistoryRepo.getUserOrderHistory();
   }
 }

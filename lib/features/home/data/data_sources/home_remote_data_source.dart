@@ -26,7 +26,6 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource
     result['data'].forEach((element) {
       products.add(ProductEntity.fromJson(element));
     });
-    saveProductsToHive(Constants.kProductsData, products);
     return products;
   }
 }

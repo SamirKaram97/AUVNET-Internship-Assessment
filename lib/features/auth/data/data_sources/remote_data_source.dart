@@ -1,5 +1,4 @@
 
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:internship/core/services/networking/api_end_points.dart';
 import 'package:internship/core/services/shared_pref/shared_pref_singleton.dart';
 import 'package:internship/core/utils/constants.dart';
@@ -7,6 +6,7 @@ import 'package:internship/core/utils/funcations/save_user_data_to_hive.dart';
 import 'package:internship/features/auth/data/mdoels/user_model/user_model.dart';
 import 'package:internship/features/auth/data/mdoels/user_sign_up_model/user_sign_up_model.dart';
 import 'package:internship/features/auth/donmain/entityes/user_entity.dart';
+
 import '../../../../core/services/networking/api_service.dart';
 
 abstract class AuthRemoteDataSource {
@@ -40,7 +40,6 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
         endPoint: ApiEndPoints.register, data: userSignUpModel.toJson());
 
     var userData=UserEntity.fromJson(UserModel.fromJson(result).data!.toJson());
-    await saveUserDataToHive(userData);
     return userData;
   }
 }

@@ -3,5 +3,5 @@ import 'package:internship/features/profile/domain/entites/order_history_entity.
 
 abstract class OrderHistoryRepo
 {
-  Future<ApiResult<List<OrderHistoryEntity>>> getUserData();
+  Future<ApiResult<List<OrderHistoryEntity>>> getUserOrderHistory();
 }
