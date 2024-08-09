@@ -9,7 +9,6 @@ import 'package:internship/features/product/presintaion/views/product_details.da
 import 'package:internship/features/profile/presintaion/profile_view.dart';
 
 import '../../features/home/domain/entityes/product_entity.dart';
-import '../../features/products.dart';
 
 abstract class AppRouters{
   static const String signInViewRouter = '/signIn';
