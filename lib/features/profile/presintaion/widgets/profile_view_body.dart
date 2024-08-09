@@ -26,25 +26,30 @@ class ProfileViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Stack(
+        fit: StackFit.passthrough,
+        alignment: AlignmentDirectional.topEnd,
+        children: [
+          SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
 
-            // sign out button
-            SignOutButton(),
+                // user data section
+                ProfileUserDataSectionConsumer(),
+                Divider(),
 
-            // user data section
-            ProfileUserDataSectionConsumer(),
-            Divider(),
-
-            // expanded item widget
-            OrderHistoryListConsumer(),
-            Divider(),
-          ],
-        ),
+                // expanded item widget
+                OrderHistoryListConsumer(),
+                Divider(),
+              ],
+            ),
+          ),
+          // sign out button
+          SignOutButton(),
+        ],
       ),
     );
   }

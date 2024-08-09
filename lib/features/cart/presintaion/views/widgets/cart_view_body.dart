@@ -6,6 +6,8 @@ import 'package:internship/features/cart/presintaion/mangers/cart_bloc.dart';
 import 'package:internship/features/cart/presintaion/views/widgets/cart_items_list_view.dart';
 import 'package:internship/features/home/domain/entityes/product_entity.dart';
 
+import 'empty_body.dart';
+
 class CartViewBody extends StatelessWidget {
   const CartViewBody({super.key, required this.cartProducts});
   final List<ProductEntity> cartProducts;

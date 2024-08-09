@@ -5,6 +5,8 @@ import 'package:internship/features/cart/presintaion/mangers/cart_bloc.dart';
 import 'package:internship/features/cart/presintaion/views/widgets/cart_view_body.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
+import 'empty_body.dart';
+
 class CartViewBodyConsumer extends StatelessWidget {
    const CartViewBodyConsumer({
     super.key,
@@ -26,7 +28,9 @@ class CartViewBodyConsumer extends StatelessWidget {
       },
       builder: (context, state) {
         var cartProducts = BlocProvider.of<CartBloc>(context).cartProducts;
-        print(cartProducts.length);
+        if(cartProducts.isEmpty) {
+          return const EmptyBody();
+        }
         return ModalProgressHUD(
           inAsyncCall: state.whenOrNull(makeOrderLoading: ()=>true)??false,
           child:  CartViewBody(cartProducts: cartProducts),

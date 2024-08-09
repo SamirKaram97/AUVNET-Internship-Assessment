@@ -15,13 +15,10 @@ class SignOutButton extends StatelessWidget {
       },
       child: const Padding(
         padding: EdgeInsets.all(8.0),
-        child: Align(
-          alignment: AlignmentDirectional.centerEnd,
-          child: CircleAvatar(
-            backgroundColor: AppColors.deepPurpleColor,
-            maxRadius: 25,
-            child: Icon(Icons.logout, color: Colors.white,),
-          ),
+        child: CircleAvatar(
+          backgroundColor: AppColors.deepPurpleColor,
+          maxRadius: 25,
+          child: Icon(Icons.logout, color: Colors.white,),
         ),
       ),
     );

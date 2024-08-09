@@ -20,5 +20,6 @@ abstract class AppStrings {
   static const String changeMyInformation = 'Change My Information';
   static const String update = 'Update';
   static const String userDataUpdatedSuccessFully = 'Data Updated Successfully';
+  static const String cartIsEmpty = "Your dont have any items in your cart";
 
 }
