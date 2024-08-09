@@ -1,5 +1,6 @@
 
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:internship/core/services/networking/api_end_points.dart';
 import 'package:internship/core/services/shared_pref/shared_pref_singleton.dart';
 import 'package:internship/core/utils/constants.dart';
 import 'package:internship/core/utils/funcations/save_user_data_to_hive.dart';
@@ -23,7 +24,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<UserEntity> signIn(
       {required String email, required String password}) async {
-    var result = await apiService.post(endPoint: "user/login",data: {
+    var result = await apiService.post(endPoint: ApiEndPoints.login,data: {
       "email":email,
       "password":password
     });
@@ -36,7 +37,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<UserEntity> signUp(UserInputDataModel userSignUpModel)async {
     var result = await apiService.post(
-        endPoint: "user/register", data: userSignUpModel.toJson());
+        endPoint: ApiEndPoints.register, data: userSignUpModel.toJson());
 
     var userData=UserEntity.fromJson(UserModel.fromJson(result).data!.toJson());
     await saveUserDataToHive(userData);

@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:internship/core/services/di/service_locator.dart';
+import 'package:internship/core/services/networking/api_end_points.dart';
 import 'package:internship/core/services/networking/api_service.dart';
 import 'package:internship/core/utils/constants.dart';
 import 'package:internship/core/utils/funcations/save_user_data_to_hive.dart';
@@ -25,7 +26,7 @@ class ProfileRemoteDataSourceImpl implements ProfileRemoteDataSource
 
   @override
   Future<List<OrderHistoryEntity>> getOrdersHistory()async {
-    var result = await apiService.get(endPoint: "orders");
+    var result = await apiService.get(endPoint: ApiEndPoints.getOrders);
     List<OrderHistoryEntity> ordersHistory=[];
     result['data'].forEach((element) {
       ordersHistory.add(OrderHistoryModel.fromJson(element));
@@ -36,7 +37,7 @@ class ProfileRemoteDataSourceImpl implements ProfileRemoteDataSource
 
   @override
   Future<UserEntity> getUserData()async {
-    var result = await apiService.get(endPoint: "userdata");
+    var result = await apiService.get(endPoint: ApiEndPoints.getUserData);
     UserEntity userData=UserEntity.fromJson(result['data']);
     saveUserDataToHive(userData);
     return userData;
@@ -50,7 +51,7 @@ class ProfileRemoteDataSourceImpl implements ProfileRemoteDataSource
 
   @override
   Future<UserEntity> updateUserData(UserInputDataModel userInputDataModel) async{
-    var result = await apiService.post(endPoint: "user/update", data: userInputDataModel.toJson());
+    var result = await apiService.post(endPoint: ApiEndPoints.updateUserData, data: userInputDataModel.toJson());
     UserEntity userData=UserEntity.fromJson(result['data']);
     saveUserDataToHive(userData);
     return userData;

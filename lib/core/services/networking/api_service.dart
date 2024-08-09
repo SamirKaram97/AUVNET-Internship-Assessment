@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
+import 'package:internship/core/services/networking/api_end_points.dart';
 import 'package:internship/core/utils/constants.dart';
 
 class ApiService {
   static late Dio _dio;
-  static const _baseUrl = "https://samirkaram97.wiremockapi.cloud/";
 
   ApiService();
 
@@ -20,15 +20,15 @@ class ApiService {
       receiveTimeout: const Duration(seconds: Constants.connectTimeOut),
       sendTimeout: const Duration(seconds: Constants.connectTimeOut),
     ));
-    _dio.options.baseUrl = _baseUrl;
+    _dio.options.baseUrl = ApiEndPoints.baseUrl;
   }
 
   Future<Map<String, dynamic>> get({required String endPoint}) async {
-    var response = await _dio.get('$_baseUrl$endPoint');
+    var response = await _dio.get("${ApiEndPoints.baseUrl}$endPoint");
     return response.data;
   }
   Future<Map<String, dynamic>> post({required String endPoint,required Map<String, dynamic> data}) async {
-    var response = await _dio.post('$_baseUrl$endPoint',data: data);
+    var response = await _dio.post("${ApiEndPoints.baseUrl}$endPoint",data: data);
     return response.data;
   }
 }

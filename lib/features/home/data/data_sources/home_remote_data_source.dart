@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:internship/core/services/di/service_locator.dart';
+import 'package:internship/core/services/networking/api_end_points.dart';
 import 'package:internship/core/services/networking/api_service.dart';
 import 'package:internship/core/utils/constants.dart';
 import 'package:internship/features/home/domain/entityes/product_entity.dart';
@@ -19,7 +20,7 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource
 
   @override
   Future<List<ProductEntity>> getProducts()async {
-    var result = await apiService.get(endPoint: "products");
+    var result = await apiService.get(endPoint: ApiEndPoints.getProducts);
     log(result.toString());
     List<ProductEntity> products=[];
     result['data'].forEach((element) {
