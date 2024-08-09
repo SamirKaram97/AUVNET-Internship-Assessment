@@ -5,6 +5,7 @@ import 'package:internship/core/services/di/service_locator.dart';
 import 'package:internship/core/services/networking/api_service.dart';
 import 'package:internship/core/utils/constants.dart';
 import 'package:internship/core/utils/funcations/save_user_data_to_hive.dart';
+import 'package:internship/features/auth/data/mdoels/user_sign_up_model/user_sign_up_model.dart';
 import 'package:internship/features/auth/donmain/entityes/user_entity.dart';
 import 'package:internship/features/home/domain/entityes/product_entity.dart';
 import 'package:internship/features/profile/data/models/order_history_model.dart';
@@ -13,6 +14,7 @@ import 'package:internship/features/profile/domain/entites/order_history_entity.
 abstract class ProfileRemoteDataSource
 {
   Future<UserEntity> getUserData();
+  Future<UserEntity> updateUserData(UserInputDataModel userInputDataModel);
   Future<List<OrderHistoryEntity>> getOrdersHistory();
 }
 
@@ -44,5 +46,13 @@ class ProfileRemoteDataSourceImpl implements ProfileRemoteDataSource
   {
     Box<OrderHistoryEntity> box=Hive.box(boxName);
     box.addAll(ordersHistory);
+  }
+
+  @override
+  Future<UserEntity> updateUserData(UserInputDataModel userInputDataModel) async{
+    var result = await apiService.post(endPoint: "user/update", data: userInputDataModel.toJson());
+    UserEntity userData=UserEntity.fromJson(result['data']);
+    saveUserDataToHive(userData);
+    return userData;
   }
 }

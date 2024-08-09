@@ -19,19 +19,19 @@ mixin _$SignUpEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(UserSignUpModel userSignUpModel) signUp,
+    required TResult Function(UserInputDataModel userSignUpModel) signUp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(UserSignUpModel userSignUpModel)? signUp,
+    TResult? Function(UserInputDataModel userSignUpModel)? signUp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(UserSignUpModel userSignUpModel)? signUp,
+    TResult Function(UserInputDataModel userSignUpModel)? signUp,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,7 +113,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(UserSignUpModel userSignUpModel) signUp,
+    required TResult Function(UserInputDataModel userSignUpModel) signUp,
   }) {
     return started();
   }
@@ -122,7 +122,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(UserSignUpModel userSignUpModel)? signUp,
+    TResult? Function(UserInputDataModel userSignUpModel)? signUp,
   }) {
     return started?.call();
   }
@@ -131,7 +131,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(UserSignUpModel userSignUpModel)? signUp,
+    TResult Function(UserInputDataModel userSignUpModel)? signUp,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -182,9 +182,9 @@ abstract class _$$SignUpImplCopyWith<$Res> {
           _$SignUpImpl value, $Res Function(_$SignUpImpl) then) =
       __$$SignUpImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({UserSignUpModel userSignUpModel});
+  $Res call({UserInputDataModel userSignUpModel});
 
-  $UserSignUpModelCopyWith<$Res> get userSignUpModel;
+  $UserInputDataModelCopyWith<$Res> get userSignUpModel;
 }
 
 /// @nodoc
@@ -204,14 +204,14 @@ class __$$SignUpImplCopyWithImpl<$Res>
       userSignUpModel: null == userSignUpModel
           ? _value.userSignUpModel
           : userSignUpModel // ignore: cast_nullable_to_non_nullable
-              as UserSignUpModel,
+              as UserInputDataModel,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UserSignUpModelCopyWith<$Res> get userSignUpModel {
-    return $UserSignUpModelCopyWith<$Res>(_value.userSignUpModel, (value) {
+  $UserInputDataModelCopyWith<$Res> get userSignUpModel {
+    return $UserInputDataModelCopyWith<$Res>(_value.userSignUpModel, (value) {
       return _then(_value.copyWith(userSignUpModel: value));
     });
   }
@@ -223,7 +223,7 @@ class _$SignUpImpl implements _SignUp {
   const _$SignUpImpl({required this.userSignUpModel});
 
   @override
-  final UserSignUpModel userSignUpModel;
+  final UserInputDataModel userSignUpModel;
 
   @override
   String toString() {
@@ -252,7 +252,7 @@ class _$SignUpImpl implements _SignUp {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(UserSignUpModel userSignUpModel) signUp,
+    required TResult Function(UserInputDataModel userSignUpModel) signUp,
   }) {
     return signUp(userSignUpModel);
   }
@@ -261,7 +261,7 @@ class _$SignUpImpl implements _SignUp {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(UserSignUpModel userSignUpModel)? signUp,
+    TResult? Function(UserInputDataModel userSignUpModel)? signUp,
   }) {
     return signUp?.call(userSignUpModel);
   }
@@ -270,7 +270,7 @@ class _$SignUpImpl implements _SignUp {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(UserSignUpModel userSignUpModel)? signUp,
+    TResult Function(UserInputDataModel userSignUpModel)? signUp,
     required TResult orElse(),
   }) {
     if (signUp != null) {
@@ -312,10 +312,10 @@ class _$SignUpImpl implements _SignUp {
 }
 
 abstract class _SignUp implements SignUpEvent {
-  const factory _SignUp({required final UserSignUpModel userSignUpModel}) =
+  const factory _SignUp({required final UserInputDataModel userSignUpModel}) =
       _$SignUpImpl;
 
-  UserSignUpModel get userSignUpModel;
+  UserInputDataModel get userSignUpModel;
   @JsonKey(ignore: true)
   _$$SignUpImplCopyWith<_$SignUpImpl> get copyWith =>
       throw _privateConstructorUsedError;

@@ -7,14 +7,14 @@ import '../../data/mdoels/user_sign_in_model/user_sign_in_model.dart';
 import '../../data/mdoels/user_sign_up_model/user_sign_up_model.dart';
 import '../entityes/user_entity.dart';
 
-class SignUpUseCase extends UseCase<UserEntity,UserSignUpModel>
+class SignUpUseCase extends UseCase<UserEntity,UserInputDataModel>
 {
   final AuthRepo authRepo;
 
   SignUpUseCase({required this.authRepo});
 
   @override
-  Future<ApiResult<UserEntity>> call([UserSignUpModel? param]) {
+  Future<ApiResult<UserEntity>> call([UserInputDataModel? param]) {
     return authRepo.signUp(userSignUpModel: param!);
   }
 }

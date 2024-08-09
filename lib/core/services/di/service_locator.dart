@@ -30,6 +30,7 @@ import 'package:internship/features/profile/domain/repos/order_history_repo.dart
 import 'package:internship/features/profile/domain/repos/user_data_repo.dart';
 import 'package:internship/features/profile/domain/use_cases/get_orders_history_use_case.dart';
 import 'package:internship/features/profile/domain/use_cases/get_user_data_use_case.dart';
+import 'package:internship/features/profile/domain/use_cases/update_user_info_use_case.dart';
 import 'package:internship/features/profile/presintaion/mangers/orders_history_bloc/order_history_bloc.dart';
 import 'package:internship/features/profile/presintaion/mangers/user_data_bloc/user_data_bloc.dart';
 
@@ -77,6 +78,7 @@ void setupServiceLocator() async {
   getIt.registerSingleton<MakeOrderUseCase>(MakeOrderUseCase());
   getIt.registerSingleton<GetUserDataUseCase>(GetUserDataUseCase());
   getIt.registerSingleton<GetOrdersHistoryUseCase>(GetOrdersHistoryUseCase());
+  getIt.registerSingleton<UpdateUserInfoUseCase>(UpdateUserInfoUseCase());
 
   // Registering BLoC
   getIt.registerFactory<UserDataBloc>(() => UserDataBloc());

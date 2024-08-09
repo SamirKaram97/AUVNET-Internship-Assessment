@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-UserSignUpModel _$UserSignUpModelFromJson(Map<String, dynamic> json) {
+UserInputDataModel _$UserInputDataModelFromJson(Map<String, dynamic> json) {
   return _UserSignUpModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$UserSignUpModel {
+mixin _$UserInputDataModel {
   String get email => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
@@ -27,23 +27,23 @@ mixin _$UserSignUpModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserSignUpModelCopyWith<UserSignUpModel> get copyWith =>
+  $UserInputDataModelCopyWith<UserInputDataModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UserSignUpModelCopyWith<$Res> {
-  factory $UserSignUpModelCopyWith(
-          UserSignUpModel value, $Res Function(UserSignUpModel) then) =
-      _$UserSignUpModelCopyWithImpl<$Res, UserSignUpModel>;
+abstract class $UserInputDataModelCopyWith<$Res> {
+  factory $UserInputDataModelCopyWith(
+          UserInputDataModel value, $Res Function(UserInputDataModel) then) =
+      _$UserInputDataModelCopyWithImpl<$Res, UserInputDataModel>;
   @useResult
   $Res call({String email, String password, String name, int age});
 }
 
 /// @nodoc
-class _$UserSignUpModelCopyWithImpl<$Res, $Val extends UserSignUpModel>
-    implements $UserSignUpModelCopyWith<$Res> {
-  _$UserSignUpModelCopyWithImpl(this._value, this._then);
+class _$UserInputDataModelCopyWithImpl<$Res, $Val extends UserInputDataModel>
+    implements $UserInputDataModelCopyWith<$Res> {
+  _$UserInputDataModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -81,7 +81,7 @@ class _$UserSignUpModelCopyWithImpl<$Res, $Val extends UserSignUpModel>
 
 /// @nodoc
 abstract class _$$UserSignUpModelImplCopyWith<$Res>
-    implements $UserSignUpModelCopyWith<$Res> {
+    implements $UserInputDataModelCopyWith<$Res> {
   factory _$$UserSignUpModelImplCopyWith(_$UserSignUpModelImpl value,
           $Res Function(_$UserSignUpModelImpl) then) =
       __$$UserSignUpModelImplCopyWithImpl<$Res>;
@@ -92,7 +92,7 @@ abstract class _$$UserSignUpModelImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UserSignUpModelImplCopyWithImpl<$Res>
-    extends _$UserSignUpModelCopyWithImpl<$Res, _$UserSignUpModelImpl>
+    extends _$UserInputDataModelCopyWithImpl<$Res, _$UserSignUpModelImpl>
     implements _$$UserSignUpModelImplCopyWith<$Res> {
   __$$UserSignUpModelImplCopyWithImpl(
       _$UserSignUpModelImpl _value, $Res Function(_$UserSignUpModelImpl) _then)
@@ -150,7 +150,7 @@ class _$UserSignUpModelImpl implements _UserSignUpModel {
 
   @override
   String toString() {
-    return 'UserSignUpModel(email: $email, password: $password, name: $name, age: $age)';
+    return 'UserInputDataModel(email: $email, password: $password, name: $name, age: $age)';
   }
 
   @override
@@ -184,7 +184,7 @@ class _$UserSignUpModelImpl implements _UserSignUpModel {
   }
 }
 
-abstract class _UserSignUpModel implements UserSignUpModel {
+abstract class _UserSignUpModel implements UserInputDataModel {
   factory _UserSignUpModel(
       {required final String email,
       required final String password,

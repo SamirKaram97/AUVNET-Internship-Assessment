@@ -9,7 +9,7 @@ import 'package:internship/features/auth/donmain/entityes/user_entity.dart';
 import '../../../../core/services/networking/api_service.dart';
 
 abstract class AuthRemoteDataSource {
-  Future<UserEntity> signUp(UserSignUpModel userSignUpModel);
+  Future<UserEntity> signUp(UserInputDataModel userSignUpModel);
   Future<UserEntity> signIn({required String email, required String password});
 }
 
@@ -34,7 +34,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   }
 
   @override
-  Future<UserEntity> signUp(UserSignUpModel userSignUpModel)async {
+  Future<UserEntity> signUp(UserInputDataModel userSignUpModel)async {
     var result = await apiService.post(
         endPoint: "user/register", data: userSignUpModel.toJson());
 

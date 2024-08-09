@@ -4,4 +4,5 @@ part of 'user_data_bloc.dart';
 class UserDataEvent with _$UserDataEvent {
   const factory UserDataEvent.started() = _Started;
   const factory UserDataEvent.getUserData() = _GetUserData;
+  const factory UserDataEvent.updateUserData(UserInputDataModel userInputDataModel) = _UpdateUserData;
 }

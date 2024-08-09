@@ -16,9 +16,13 @@ class ProfileUserDataSectionConsumer extends StatelessWidget {
       },
       builder: (context, state) {
         return state.maybeWhen(orElse: () => const SizedBox(),
-          getUserDataLoading: () => const CircularProgressIndicator(),
+          getUserDataLoading: () => const Center(child: CircularProgressIndicator()),
           getUserDataFailure: (errorMessage) => Center(child:  Text(errorMessage)),
           getUserDataSuccess: (userData) =>  ProfileUserDataSection(userEntity: userData,),
+          updateUserDataLoading: () => const Center(child: CircularProgressIndicator()),
+          updateUserDataFailure: (errorMessage) => Center(child:  Text(errorMessage)),
+          updateUserDataSuccess: (userData) =>  ProfileUserDataSection(userEntity: userData,),
+
         );
       },
     );

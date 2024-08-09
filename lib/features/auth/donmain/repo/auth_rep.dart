@@ -5,5 +5,5 @@ import 'package:internship/features/auth/donmain/entityes/user_entity.dart';
 
 abstract class AuthRepo{
   Future<ApiResult<UserEntity>> signIn({required String email,required String password});
-  Future<ApiResult<UserEntity>> signUp({required UserSignUpModel userSignUpModel});
+  Future<ApiResult<UserEntity>> signUp({required UserInputDataModel userSignUpModel});
 }

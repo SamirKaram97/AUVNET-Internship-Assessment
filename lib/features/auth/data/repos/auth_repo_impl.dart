@@ -28,7 +28,7 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<ApiResult<UserEntity>> signUp(
-      {required UserSignUpModel userSignUpModel}) async {
+      {required UserInputDataModel userSignUpModel}) async {
     try {
       var result = await remoteDataSource.signUp(userSignUpModel);
       return ApiResult.success(result);

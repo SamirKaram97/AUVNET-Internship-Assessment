@@ -17,7 +17,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
     });
   }
 
-  void signUp({required UserSignUpModel userSignUpModel}) {
+  void signUp({required UserInputDataModel userSignUpModel}) {
     emit(const SignUpState.signUpLoadingState()) ;
     signUpUseCase.call(userSignUpModel).then((result) {
       result.when(

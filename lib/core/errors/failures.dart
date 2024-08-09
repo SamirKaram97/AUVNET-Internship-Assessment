@@ -37,7 +37,11 @@ class ServerFailure extends Failure {
   }
 
   factory ServerFailure.fromResponse(int statuesCode, dynamic response) {
-    print(response.toString());
+    String message=response['error']['message'];
+    if (message!=null) {
+      return ServerFailure(message);
+    }
+    else{
     if (statuesCode == 404) {
       return ServerFailure('Your request was not found, please try later');
     } else if (statuesCode == 500) {
@@ -47,6 +51,6 @@ class ServerFailure extends Failure {
     } else {
       return ServerFailure('There was an error , please try again');
     }
-  }
+  }}
 }
 

@@ -30,7 +30,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
   late TextEditingController emailController;
   late TextEditingController passwordController;
   late GlobalKey<FormState> formKey ;
-  UserSignUpModel _userSignUpModel = UserSignUpModel(email: '', password: '', name: '', age: 0);
+  UserInputDataModel _userSignUpModel = UserInputDataModel(email: '', password: '', name: '', age: 0);
 
   @override
   void initState() {

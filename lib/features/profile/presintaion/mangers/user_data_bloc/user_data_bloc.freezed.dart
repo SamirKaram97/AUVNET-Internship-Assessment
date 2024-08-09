@@ -20,18 +20,22 @@ mixin _$UserDataEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getUserData,
+    required TResult Function(UserInputDataModel userInputDataModel)
+        updateUserData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getUserData,
+    TResult? Function(UserInputDataModel userInputDataModel)? updateUserData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getUserData,
+    TResult Function(UserInputDataModel userInputDataModel)? updateUserData,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +43,21 @@ mixin _$UserDataEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetUserData value) getUserData,
+    required TResult Function(_UpdateUserData value) updateUserData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetUserData value)? getUserData,
+    TResult? Function(_UpdateUserData value)? updateUserData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetUserData value)? getUserData,
+    TResult Function(_UpdateUserData value)? updateUserData,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +121,8 @@ class _$StartedImpl implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getUserData,
+    required TResult Function(UserInputDataModel userInputDataModel)
+        updateUserData,
   }) {
     return started();
   }
@@ -123,6 +132,7 @@ class _$StartedImpl implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getUserData,
+    TResult? Function(UserInputDataModel userInputDataModel)? updateUserData,
   }) {
     return started?.call();
   }
@@ -132,6 +142,7 @@ class _$StartedImpl implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getUserData,
+    TResult Function(UserInputDataModel userInputDataModel)? updateUserData,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -145,6 +156,7 @@ class _$StartedImpl implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetUserData value) getUserData,
+    required TResult Function(_UpdateUserData value) updateUserData,
   }) {
     return started(this);
   }
@@ -154,6 +166,7 @@ class _$StartedImpl implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetUserData value)? getUserData,
+    TResult? Function(_UpdateUserData value)? updateUserData,
   }) {
     return started?.call(this);
   }
@@ -163,6 +176,7 @@ class _$StartedImpl implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetUserData value)? getUserData,
+    TResult Function(_UpdateUserData value)? updateUserData,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -216,6 +230,8 @@ class _$GetUserDataImpl implements _GetUserData {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getUserData,
+    required TResult Function(UserInputDataModel userInputDataModel)
+        updateUserData,
   }) {
     return getUserData();
   }
@@ -225,6 +241,7 @@ class _$GetUserDataImpl implements _GetUserData {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getUserData,
+    TResult? Function(UserInputDataModel userInputDataModel)? updateUserData,
   }) {
     return getUserData?.call();
   }
@@ -234,6 +251,7 @@ class _$GetUserDataImpl implements _GetUserData {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getUserData,
+    TResult Function(UserInputDataModel userInputDataModel)? updateUserData,
     required TResult orElse(),
   }) {
     if (getUserData != null) {
@@ -247,6 +265,7 @@ class _$GetUserDataImpl implements _GetUserData {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetUserData value) getUserData,
+    required TResult Function(_UpdateUserData value) updateUserData,
   }) {
     return getUserData(this);
   }
@@ -256,6 +275,7 @@ class _$GetUserDataImpl implements _GetUserData {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetUserData value)? getUserData,
+    TResult? Function(_UpdateUserData value)? updateUserData,
   }) {
     return getUserData?.call(this);
   }
@@ -265,6 +285,7 @@ class _$GetUserDataImpl implements _GetUserData {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetUserData value)? getUserData,
+    TResult Function(_UpdateUserData value)? updateUserData,
     required TResult orElse(),
   }) {
     if (getUserData != null) {
@@ -279,6 +300,160 @@ abstract class _GetUserData implements UserDataEvent {
 }
 
 /// @nodoc
+abstract class _$$UpdateUserDataImplCopyWith<$Res> {
+  factory _$$UpdateUserDataImplCopyWith(_$UpdateUserDataImpl value,
+          $Res Function(_$UpdateUserDataImpl) then) =
+      __$$UpdateUserDataImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserInputDataModel userInputDataModel});
+
+  $UserInputDataModelCopyWith<$Res> get userInputDataModel;
+}
+
+/// @nodoc
+class __$$UpdateUserDataImplCopyWithImpl<$Res>
+    extends _$UserDataEventCopyWithImpl<$Res, _$UpdateUserDataImpl>
+    implements _$$UpdateUserDataImplCopyWith<$Res> {
+  __$$UpdateUserDataImplCopyWithImpl(
+      _$UpdateUserDataImpl _value, $Res Function(_$UpdateUserDataImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userInputDataModel = null,
+  }) {
+    return _then(_$UpdateUserDataImpl(
+      null == userInputDataModel
+          ? _value.userInputDataModel
+          : userInputDataModel // ignore: cast_nullable_to_non_nullable
+              as UserInputDataModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserInputDataModelCopyWith<$Res> get userInputDataModel {
+    return $UserInputDataModelCopyWith<$Res>(_value.userInputDataModel,
+        (value) {
+      return _then(_value.copyWith(userInputDataModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$UpdateUserDataImpl implements _UpdateUserData {
+  const _$UpdateUserDataImpl(this.userInputDataModel);
+
+  @override
+  final UserInputDataModel userInputDataModel;
+
+  @override
+  String toString() {
+    return 'UserDataEvent.updateUserData(userInputDataModel: $userInputDataModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateUserDataImpl &&
+            (identical(other.userInputDataModel, userInputDataModel) ||
+                other.userInputDataModel == userInputDataModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, userInputDataModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateUserDataImplCopyWith<_$UpdateUserDataImpl> get copyWith =>
+      __$$UpdateUserDataImplCopyWithImpl<_$UpdateUserDataImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserData,
+    required TResult Function(UserInputDataModel userInputDataModel)
+        updateUserData,
+  }) {
+    return updateUserData(userInputDataModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserData,
+    TResult? Function(UserInputDataModel userInputDataModel)? updateUserData,
+  }) {
+    return updateUserData?.call(userInputDataModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserData,
+    TResult Function(UserInputDataModel userInputDataModel)? updateUserData,
+    required TResult orElse(),
+  }) {
+    if (updateUserData != null) {
+      return updateUserData(userInputDataModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetUserData value) getUserData,
+    required TResult Function(_UpdateUserData value) updateUserData,
+  }) {
+    return updateUserData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetUserData value)? getUserData,
+    TResult? Function(_UpdateUserData value)? updateUserData,
+  }) {
+    return updateUserData?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetUserData value)? getUserData,
+    TResult Function(_UpdateUserData value)? updateUserData,
+    required TResult orElse(),
+  }) {
+    if (updateUserData != null) {
+      return updateUserData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateUserData implements UserDataEvent {
+  const factory _UpdateUserData(final UserInputDataModel userInputDataModel) =
+      _$UpdateUserDataImpl;
+
+  UserInputDataModel get userInputDataModel;
+  @JsonKey(ignore: true)
+  _$$UpdateUserDataImplCopyWith<_$UpdateUserDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$UserDataState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -286,6 +461,9 @@ mixin _$UserDataState {
     required TResult Function() getUserDataLoading,
     required TResult Function(UserEntity userData) getUserDataSuccess,
     required TResult Function(String errorMessage) getUserDataFailure,
+    required TResult Function() updateUserDataLoading,
+    required TResult Function(UserEntity userData) updateUserDataSuccess,
+    required TResult Function(String errorMessage) updateUserDataFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -294,6 +472,9 @@ mixin _$UserDataState {
     TResult? Function()? getUserDataLoading,
     TResult? Function(UserEntity userData)? getUserDataSuccess,
     TResult? Function(String errorMessage)? getUserDataFailure,
+    TResult? Function()? updateUserDataLoading,
+    TResult? Function(UserEntity userData)? updateUserDataSuccess,
+    TResult? Function(String errorMessage)? updateUserDataFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -302,6 +483,9 @@ mixin _$UserDataState {
     TResult Function()? getUserDataLoading,
     TResult Function(UserEntity userData)? getUserDataSuccess,
     TResult Function(String errorMessage)? getUserDataFailure,
+    TResult Function()? updateUserDataLoading,
+    TResult Function(UserEntity userData)? updateUserDataSuccess,
+    TResult Function(String errorMessage)? updateUserDataFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -311,6 +495,12 @@ mixin _$UserDataState {
     required TResult Function(_GetUserDataLoading value) getUserDataLoading,
     required TResult Function(_GetUserDataSuccess value) getUserDataSuccess,
     required TResult Function(_GetUserDataFailure value) getUserDataFailure,
+    required TResult Function(_UpdateUserDataLoading value)
+        updateUserDataLoading,
+    required TResult Function(_UpdateUserDataSuccess value)
+        updateUserDataSuccess,
+    required TResult Function(_UpdateUserDataFailure value)
+        updateUserDataFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -319,6 +509,9 @@ mixin _$UserDataState {
     TResult? Function(_GetUserDataLoading value)? getUserDataLoading,
     TResult? Function(_GetUserDataSuccess value)? getUserDataSuccess,
     TResult? Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult? Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult? Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult? Function(_UpdateUserDataFailure value)? updateUserDataFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -327,6 +520,9 @@ mixin _$UserDataState {
     TResult Function(_GetUserDataLoading value)? getUserDataLoading,
     TResult Function(_GetUserDataSuccess value)? getUserDataSuccess,
     TResult Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult Function(_UpdateUserDataFailure value)? updateUserDataFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -392,6 +588,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() getUserDataLoading,
     required TResult Function(UserEntity userData) getUserDataSuccess,
     required TResult Function(String errorMessage) getUserDataFailure,
+    required TResult Function() updateUserDataLoading,
+    required TResult Function(UserEntity userData) updateUserDataSuccess,
+    required TResult Function(String errorMessage) updateUserDataFailure,
   }) {
     return initial();
   }
@@ -403,6 +602,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? getUserDataLoading,
     TResult? Function(UserEntity userData)? getUserDataSuccess,
     TResult? Function(String errorMessage)? getUserDataFailure,
+    TResult? Function()? updateUserDataLoading,
+    TResult? Function(UserEntity userData)? updateUserDataSuccess,
+    TResult? Function(String errorMessage)? updateUserDataFailure,
   }) {
     return initial?.call();
   }
@@ -414,6 +616,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? getUserDataLoading,
     TResult Function(UserEntity userData)? getUserDataSuccess,
     TResult Function(String errorMessage)? getUserDataFailure,
+    TResult Function()? updateUserDataLoading,
+    TResult Function(UserEntity userData)? updateUserDataSuccess,
+    TResult Function(String errorMessage)? updateUserDataFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -429,6 +634,12 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_GetUserDataLoading value) getUserDataLoading,
     required TResult Function(_GetUserDataSuccess value) getUserDataSuccess,
     required TResult Function(_GetUserDataFailure value) getUserDataFailure,
+    required TResult Function(_UpdateUserDataLoading value)
+        updateUserDataLoading,
+    required TResult Function(_UpdateUserDataSuccess value)
+        updateUserDataSuccess,
+    required TResult Function(_UpdateUserDataFailure value)
+        updateUserDataFailure,
   }) {
     return initial(this);
   }
@@ -440,6 +651,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_GetUserDataLoading value)? getUserDataLoading,
     TResult? Function(_GetUserDataSuccess value)? getUserDataSuccess,
     TResult? Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult? Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult? Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult? Function(_UpdateUserDataFailure value)? updateUserDataFailure,
   }) {
     return initial?.call(this);
   }
@@ -451,6 +665,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(_GetUserDataLoading value)? getUserDataLoading,
     TResult Function(_GetUserDataSuccess value)? getUserDataSuccess,
     TResult Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult Function(_UpdateUserDataFailure value)? updateUserDataFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -506,6 +723,9 @@ class _$GetUserDataLoadingImpl implements _GetUserDataLoading {
     required TResult Function() getUserDataLoading,
     required TResult Function(UserEntity userData) getUserDataSuccess,
     required TResult Function(String errorMessage) getUserDataFailure,
+    required TResult Function() updateUserDataLoading,
+    required TResult Function(UserEntity userData) updateUserDataSuccess,
+    required TResult Function(String errorMessage) updateUserDataFailure,
   }) {
     return getUserDataLoading();
   }
@@ -517,6 +737,9 @@ class _$GetUserDataLoadingImpl implements _GetUserDataLoading {
     TResult? Function()? getUserDataLoading,
     TResult? Function(UserEntity userData)? getUserDataSuccess,
     TResult? Function(String errorMessage)? getUserDataFailure,
+    TResult? Function()? updateUserDataLoading,
+    TResult? Function(UserEntity userData)? updateUserDataSuccess,
+    TResult? Function(String errorMessage)? updateUserDataFailure,
   }) {
     return getUserDataLoading?.call();
   }
@@ -528,6 +751,9 @@ class _$GetUserDataLoadingImpl implements _GetUserDataLoading {
     TResult Function()? getUserDataLoading,
     TResult Function(UserEntity userData)? getUserDataSuccess,
     TResult Function(String errorMessage)? getUserDataFailure,
+    TResult Function()? updateUserDataLoading,
+    TResult Function(UserEntity userData)? updateUserDataSuccess,
+    TResult Function(String errorMessage)? updateUserDataFailure,
     required TResult orElse(),
   }) {
     if (getUserDataLoading != null) {
@@ -543,6 +769,12 @@ class _$GetUserDataLoadingImpl implements _GetUserDataLoading {
     required TResult Function(_GetUserDataLoading value) getUserDataLoading,
     required TResult Function(_GetUserDataSuccess value) getUserDataSuccess,
     required TResult Function(_GetUserDataFailure value) getUserDataFailure,
+    required TResult Function(_UpdateUserDataLoading value)
+        updateUserDataLoading,
+    required TResult Function(_UpdateUserDataSuccess value)
+        updateUserDataSuccess,
+    required TResult Function(_UpdateUserDataFailure value)
+        updateUserDataFailure,
   }) {
     return getUserDataLoading(this);
   }
@@ -554,6 +786,9 @@ class _$GetUserDataLoadingImpl implements _GetUserDataLoading {
     TResult? Function(_GetUserDataLoading value)? getUserDataLoading,
     TResult? Function(_GetUserDataSuccess value)? getUserDataSuccess,
     TResult? Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult? Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult? Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult? Function(_UpdateUserDataFailure value)? updateUserDataFailure,
   }) {
     return getUserDataLoading?.call(this);
   }
@@ -565,6 +800,9 @@ class _$GetUserDataLoadingImpl implements _GetUserDataLoading {
     TResult Function(_GetUserDataLoading value)? getUserDataLoading,
     TResult Function(_GetUserDataSuccess value)? getUserDataSuccess,
     TResult Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult Function(_UpdateUserDataFailure value)? updateUserDataFailure,
     required TResult orElse(),
   }) {
     if (getUserDataLoading != null) {
@@ -648,6 +886,9 @@ class _$GetUserDataSuccessImpl implements _GetUserDataSuccess {
     required TResult Function() getUserDataLoading,
     required TResult Function(UserEntity userData) getUserDataSuccess,
     required TResult Function(String errorMessage) getUserDataFailure,
+    required TResult Function() updateUserDataLoading,
+    required TResult Function(UserEntity userData) updateUserDataSuccess,
+    required TResult Function(String errorMessage) updateUserDataFailure,
   }) {
     return getUserDataSuccess(userData);
   }
@@ -659,6 +900,9 @@ class _$GetUserDataSuccessImpl implements _GetUserDataSuccess {
     TResult? Function()? getUserDataLoading,
     TResult? Function(UserEntity userData)? getUserDataSuccess,
     TResult? Function(String errorMessage)? getUserDataFailure,
+    TResult? Function()? updateUserDataLoading,
+    TResult? Function(UserEntity userData)? updateUserDataSuccess,
+    TResult? Function(String errorMessage)? updateUserDataFailure,
   }) {
     return getUserDataSuccess?.call(userData);
   }
@@ -670,6 +914,9 @@ class _$GetUserDataSuccessImpl implements _GetUserDataSuccess {
     TResult Function()? getUserDataLoading,
     TResult Function(UserEntity userData)? getUserDataSuccess,
     TResult Function(String errorMessage)? getUserDataFailure,
+    TResult Function()? updateUserDataLoading,
+    TResult Function(UserEntity userData)? updateUserDataSuccess,
+    TResult Function(String errorMessage)? updateUserDataFailure,
     required TResult orElse(),
   }) {
     if (getUserDataSuccess != null) {
@@ -685,6 +932,12 @@ class _$GetUserDataSuccessImpl implements _GetUserDataSuccess {
     required TResult Function(_GetUserDataLoading value) getUserDataLoading,
     required TResult Function(_GetUserDataSuccess value) getUserDataSuccess,
     required TResult Function(_GetUserDataFailure value) getUserDataFailure,
+    required TResult Function(_UpdateUserDataLoading value)
+        updateUserDataLoading,
+    required TResult Function(_UpdateUserDataSuccess value)
+        updateUserDataSuccess,
+    required TResult Function(_UpdateUserDataFailure value)
+        updateUserDataFailure,
   }) {
     return getUserDataSuccess(this);
   }
@@ -696,6 +949,9 @@ class _$GetUserDataSuccessImpl implements _GetUserDataSuccess {
     TResult? Function(_GetUserDataLoading value)? getUserDataLoading,
     TResult? Function(_GetUserDataSuccess value)? getUserDataSuccess,
     TResult? Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult? Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult? Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult? Function(_UpdateUserDataFailure value)? updateUserDataFailure,
   }) {
     return getUserDataSuccess?.call(this);
   }
@@ -707,6 +963,9 @@ class _$GetUserDataSuccessImpl implements _GetUserDataSuccess {
     TResult Function(_GetUserDataLoading value)? getUserDataLoading,
     TResult Function(_GetUserDataSuccess value)? getUserDataSuccess,
     TResult Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult Function(_UpdateUserDataFailure value)? updateUserDataFailure,
     required TResult orElse(),
   }) {
     if (getUserDataSuccess != null) {
@@ -796,6 +1055,9 @@ class _$GetUserDataFailureImpl implements _GetUserDataFailure {
     required TResult Function() getUserDataLoading,
     required TResult Function(UserEntity userData) getUserDataSuccess,
     required TResult Function(String errorMessage) getUserDataFailure,
+    required TResult Function() updateUserDataLoading,
+    required TResult Function(UserEntity userData) updateUserDataSuccess,
+    required TResult Function(String errorMessage) updateUserDataFailure,
   }) {
     return getUserDataFailure(errorMessage);
   }
@@ -807,6 +1069,9 @@ class _$GetUserDataFailureImpl implements _GetUserDataFailure {
     TResult? Function()? getUserDataLoading,
     TResult? Function(UserEntity userData)? getUserDataSuccess,
     TResult? Function(String errorMessage)? getUserDataFailure,
+    TResult? Function()? updateUserDataLoading,
+    TResult? Function(UserEntity userData)? updateUserDataSuccess,
+    TResult? Function(String errorMessage)? updateUserDataFailure,
   }) {
     return getUserDataFailure?.call(errorMessage);
   }
@@ -818,6 +1083,9 @@ class _$GetUserDataFailureImpl implements _GetUserDataFailure {
     TResult Function()? getUserDataLoading,
     TResult Function(UserEntity userData)? getUserDataSuccess,
     TResult Function(String errorMessage)? getUserDataFailure,
+    TResult Function()? updateUserDataLoading,
+    TResult Function(UserEntity userData)? updateUserDataSuccess,
+    TResult Function(String errorMessage)? updateUserDataFailure,
     required TResult orElse(),
   }) {
     if (getUserDataFailure != null) {
@@ -833,6 +1101,12 @@ class _$GetUserDataFailureImpl implements _GetUserDataFailure {
     required TResult Function(_GetUserDataLoading value) getUserDataLoading,
     required TResult Function(_GetUserDataSuccess value) getUserDataSuccess,
     required TResult Function(_GetUserDataFailure value) getUserDataFailure,
+    required TResult Function(_UpdateUserDataLoading value)
+        updateUserDataLoading,
+    required TResult Function(_UpdateUserDataSuccess value)
+        updateUserDataSuccess,
+    required TResult Function(_UpdateUserDataFailure value)
+        updateUserDataFailure,
   }) {
     return getUserDataFailure(this);
   }
@@ -844,6 +1118,9 @@ class _$GetUserDataFailureImpl implements _GetUserDataFailure {
     TResult? Function(_GetUserDataLoading value)? getUserDataLoading,
     TResult? Function(_GetUserDataSuccess value)? getUserDataSuccess,
     TResult? Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult? Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult? Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult? Function(_UpdateUserDataFailure value)? updateUserDataFailure,
   }) {
     return getUserDataFailure?.call(this);
   }
@@ -855,6 +1132,9 @@ class _$GetUserDataFailureImpl implements _GetUserDataFailure {
     TResult Function(_GetUserDataLoading value)? getUserDataLoading,
     TResult Function(_GetUserDataSuccess value)? getUserDataSuccess,
     TResult Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult Function(_UpdateUserDataFailure value)? updateUserDataFailure,
     required TResult orElse(),
   }) {
     if (getUserDataFailure != null) {
@@ -872,4 +1152,481 @@ abstract class _GetUserDataFailure implements UserDataState {
   @JsonKey(ignore: true)
   _$$GetUserDataFailureImplCopyWith<_$GetUserDataFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateUserDataLoadingImplCopyWith<$Res> {
+  factory _$$UpdateUserDataLoadingImplCopyWith(
+          _$UpdateUserDataLoadingImpl value,
+          $Res Function(_$UpdateUserDataLoadingImpl) then) =
+      __$$UpdateUserDataLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateUserDataLoadingImplCopyWithImpl<$Res>
+    extends _$UserDataStateCopyWithImpl<$Res, _$UpdateUserDataLoadingImpl>
+    implements _$$UpdateUserDataLoadingImplCopyWith<$Res> {
+  __$$UpdateUserDataLoadingImplCopyWithImpl(_$UpdateUserDataLoadingImpl _value,
+      $Res Function(_$UpdateUserDataLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateUserDataLoadingImpl implements _UpdateUserDataLoading {
+  const _$UpdateUserDataLoadingImpl();
+
+  @override
+  String toString() {
+    return 'UserDataState.updateUserDataLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateUserDataLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getUserDataLoading,
+    required TResult Function(UserEntity userData) getUserDataSuccess,
+    required TResult Function(String errorMessage) getUserDataFailure,
+    required TResult Function() updateUserDataLoading,
+    required TResult Function(UserEntity userData) updateUserDataSuccess,
+    required TResult Function(String errorMessage) updateUserDataFailure,
+  }) {
+    return updateUserDataLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getUserDataLoading,
+    TResult? Function(UserEntity userData)? getUserDataSuccess,
+    TResult? Function(String errorMessage)? getUserDataFailure,
+    TResult? Function()? updateUserDataLoading,
+    TResult? Function(UserEntity userData)? updateUserDataSuccess,
+    TResult? Function(String errorMessage)? updateUserDataFailure,
+  }) {
+    return updateUserDataLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getUserDataLoading,
+    TResult Function(UserEntity userData)? getUserDataSuccess,
+    TResult Function(String errorMessage)? getUserDataFailure,
+    TResult Function()? updateUserDataLoading,
+    TResult Function(UserEntity userData)? updateUserDataSuccess,
+    TResult Function(String errorMessage)? updateUserDataFailure,
+    required TResult orElse(),
+  }) {
+    if (updateUserDataLoading != null) {
+      return updateUserDataLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_GetUserDataLoading value) getUserDataLoading,
+    required TResult Function(_GetUserDataSuccess value) getUserDataSuccess,
+    required TResult Function(_GetUserDataFailure value) getUserDataFailure,
+    required TResult Function(_UpdateUserDataLoading value)
+        updateUserDataLoading,
+    required TResult Function(_UpdateUserDataSuccess value)
+        updateUserDataSuccess,
+    required TResult Function(_UpdateUserDataFailure value)
+        updateUserDataFailure,
+  }) {
+    return updateUserDataLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_GetUserDataLoading value)? getUserDataLoading,
+    TResult? Function(_GetUserDataSuccess value)? getUserDataSuccess,
+    TResult? Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult? Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult? Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult? Function(_UpdateUserDataFailure value)? updateUserDataFailure,
+  }) {
+    return updateUserDataLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_GetUserDataLoading value)? getUserDataLoading,
+    TResult Function(_GetUserDataSuccess value)? getUserDataSuccess,
+    TResult Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult Function(_UpdateUserDataFailure value)? updateUserDataFailure,
+    required TResult orElse(),
+  }) {
+    if (updateUserDataLoading != null) {
+      return updateUserDataLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateUserDataLoading implements UserDataState {
+  const factory _UpdateUserDataLoading() = _$UpdateUserDataLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateUserDataSuccessImplCopyWith<$Res> {
+  factory _$$UpdateUserDataSuccessImplCopyWith(
+          _$UpdateUserDataSuccessImpl value,
+          $Res Function(_$UpdateUserDataSuccessImpl) then) =
+      __$$UpdateUserDataSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserEntity userData});
+}
+
+/// @nodoc
+class __$$UpdateUserDataSuccessImplCopyWithImpl<$Res>
+    extends _$UserDataStateCopyWithImpl<$Res, _$UpdateUserDataSuccessImpl>
+    implements _$$UpdateUserDataSuccessImplCopyWith<$Res> {
+  __$$UpdateUserDataSuccessImplCopyWithImpl(_$UpdateUserDataSuccessImpl _value,
+      $Res Function(_$UpdateUserDataSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userData = null,
+  }) {
+    return _then(_$UpdateUserDataSuccessImpl(
+      null == userData
+          ? _value.userData
+          : userData // ignore: cast_nullable_to_non_nullable
+              as UserEntity,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateUserDataSuccessImpl implements _UpdateUserDataSuccess {
+  const _$UpdateUserDataSuccessImpl(this.userData);
+
+  @override
+  final UserEntity userData;
+
+  @override
+  String toString() {
+    return 'UserDataState.updateUserDataSuccess(userData: $userData)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateUserDataSuccessImpl &&
+            (identical(other.userData, userData) ||
+                other.userData == userData));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, userData);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateUserDataSuccessImplCopyWith<_$UpdateUserDataSuccessImpl>
+      get copyWith => __$$UpdateUserDataSuccessImplCopyWithImpl<
+          _$UpdateUserDataSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getUserDataLoading,
+    required TResult Function(UserEntity userData) getUserDataSuccess,
+    required TResult Function(String errorMessage) getUserDataFailure,
+    required TResult Function() updateUserDataLoading,
+    required TResult Function(UserEntity userData) updateUserDataSuccess,
+    required TResult Function(String errorMessage) updateUserDataFailure,
+  }) {
+    return updateUserDataSuccess(userData);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getUserDataLoading,
+    TResult? Function(UserEntity userData)? getUserDataSuccess,
+    TResult? Function(String errorMessage)? getUserDataFailure,
+    TResult? Function()? updateUserDataLoading,
+    TResult? Function(UserEntity userData)? updateUserDataSuccess,
+    TResult? Function(String errorMessage)? updateUserDataFailure,
+  }) {
+    return updateUserDataSuccess?.call(userData);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getUserDataLoading,
+    TResult Function(UserEntity userData)? getUserDataSuccess,
+    TResult Function(String errorMessage)? getUserDataFailure,
+    TResult Function()? updateUserDataLoading,
+    TResult Function(UserEntity userData)? updateUserDataSuccess,
+    TResult Function(String errorMessage)? updateUserDataFailure,
+    required TResult orElse(),
+  }) {
+    if (updateUserDataSuccess != null) {
+      return updateUserDataSuccess(userData);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_GetUserDataLoading value) getUserDataLoading,
+    required TResult Function(_GetUserDataSuccess value) getUserDataSuccess,
+    required TResult Function(_GetUserDataFailure value) getUserDataFailure,
+    required TResult Function(_UpdateUserDataLoading value)
+        updateUserDataLoading,
+    required TResult Function(_UpdateUserDataSuccess value)
+        updateUserDataSuccess,
+    required TResult Function(_UpdateUserDataFailure value)
+        updateUserDataFailure,
+  }) {
+    return updateUserDataSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_GetUserDataLoading value)? getUserDataLoading,
+    TResult? Function(_GetUserDataSuccess value)? getUserDataSuccess,
+    TResult? Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult? Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult? Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult? Function(_UpdateUserDataFailure value)? updateUserDataFailure,
+  }) {
+    return updateUserDataSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_GetUserDataLoading value)? getUserDataLoading,
+    TResult Function(_GetUserDataSuccess value)? getUserDataSuccess,
+    TResult Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult Function(_UpdateUserDataFailure value)? updateUserDataFailure,
+    required TResult orElse(),
+  }) {
+    if (updateUserDataSuccess != null) {
+      return updateUserDataSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateUserDataSuccess implements UserDataState {
+  const factory _UpdateUserDataSuccess(final UserEntity userData) =
+      _$UpdateUserDataSuccessImpl;
+
+  UserEntity get userData;
+  @JsonKey(ignore: true)
+  _$$UpdateUserDataSuccessImplCopyWith<_$UpdateUserDataSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateUserDataFailureImplCopyWith<$Res> {
+  factory _$$UpdateUserDataFailureImplCopyWith(
+          _$UpdateUserDataFailureImpl value,
+          $Res Function(_$UpdateUserDataFailureImpl) then) =
+      __$$UpdateUserDataFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String errorMessage});
+}
+
+/// @nodoc
+class __$$UpdateUserDataFailureImplCopyWithImpl<$Res>
+    extends _$UserDataStateCopyWithImpl<$Res, _$UpdateUserDataFailureImpl>
+    implements _$$UpdateUserDataFailureImplCopyWith<$Res> {
+  __$$UpdateUserDataFailureImplCopyWithImpl(_$UpdateUserDataFailureImpl _value,
+      $Res Function(_$UpdateUserDataFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMessage = null,
+  }) {
+    return _then(_$UpdateUserDataFailureImpl(
+      null == errorMessage
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateUserDataFailureImpl implements _UpdateUserDataFailure {
+  const _$UpdateUserDataFailureImpl(this.errorMessage);
+
+  @override
+  final String errorMessage;
+
+  @override
+  String toString() {
+    return 'UserDataState.updateUserDataFailure(errorMessage: $errorMessage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateUserDataFailureImpl &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorMessage);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateUserDataFailureImplCopyWith<_$UpdateUserDataFailureImpl>
+      get copyWith => __$$UpdateUserDataFailureImplCopyWithImpl<
+          _$UpdateUserDataFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getUserDataLoading,
+    required TResult Function(UserEntity userData) getUserDataSuccess,
+    required TResult Function(String errorMessage) getUserDataFailure,
+    required TResult Function() updateUserDataLoading,
+    required TResult Function(UserEntity userData) updateUserDataSuccess,
+    required TResult Function(String errorMessage) updateUserDataFailure,
+  }) {
+    return updateUserDataFailure(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getUserDataLoading,
+    TResult? Function(UserEntity userData)? getUserDataSuccess,
+    TResult? Function(String errorMessage)? getUserDataFailure,
+    TResult? Function()? updateUserDataLoading,
+    TResult? Function(UserEntity userData)? updateUserDataSuccess,
+    TResult? Function(String errorMessage)? updateUserDataFailure,
+  }) {
+    return updateUserDataFailure?.call(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getUserDataLoading,
+    TResult Function(UserEntity userData)? getUserDataSuccess,
+    TResult Function(String errorMessage)? getUserDataFailure,
+    TResult Function()? updateUserDataLoading,
+    TResult Function(UserEntity userData)? updateUserDataSuccess,
+    TResult Function(String errorMessage)? updateUserDataFailure,
+    required TResult orElse(),
+  }) {
+    if (updateUserDataFailure != null) {
+      return updateUserDataFailure(errorMessage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_GetUserDataLoading value) getUserDataLoading,
+    required TResult Function(_GetUserDataSuccess value) getUserDataSuccess,
+    required TResult Function(_GetUserDataFailure value) getUserDataFailure,
+    required TResult Function(_UpdateUserDataLoading value)
+        updateUserDataLoading,
+    required TResult Function(_UpdateUserDataSuccess value)
+        updateUserDataSuccess,
+    required TResult Function(_UpdateUserDataFailure value)
+        updateUserDataFailure,
+  }) {
+    return updateUserDataFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_GetUserDataLoading value)? getUserDataLoading,
+    TResult? Function(_GetUserDataSuccess value)? getUserDataSuccess,
+    TResult? Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult? Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult? Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult? Function(_UpdateUserDataFailure value)? updateUserDataFailure,
+  }) {
+    return updateUserDataFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_GetUserDataLoading value)? getUserDataLoading,
+    TResult Function(_GetUserDataSuccess value)? getUserDataSuccess,
+    TResult Function(_GetUserDataFailure value)? getUserDataFailure,
+    TResult Function(_UpdateUserDataLoading value)? updateUserDataLoading,
+    TResult Function(_UpdateUserDataSuccess value)? updateUserDataSuccess,
+    TResult Function(_UpdateUserDataFailure value)? updateUserDataFailure,
+    required TResult orElse(),
+  }) {
+    if (updateUserDataFailure != null) {
+      return updateUserDataFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateUserDataFailure implements UserDataState {
+  const factory _UpdateUserDataFailure(final String errorMessage) =
+      _$UpdateUserDataFailureImpl;
+
+  String get errorMessage;
+  @JsonKey(ignore: true)
+  _$$UpdateUserDataFailureImplCopyWith<_$UpdateUserDataFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
