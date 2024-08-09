@@ -16,5 +16,8 @@ abstract class AppStrings {
   static const String noInternetConnection = "No Internet Connection";
   static const String bestSeller = 'Best Seller';
   static const String orderNow = 'Order Now';
+  static const String ordersHistory = 'Orders History';
+  static const String changeMyInformation = 'Change My Information';
+  static const String update = 'Update';
 
 }
