@@ -15,11 +15,11 @@ class UserDataBloc extends Bloc<UserDataEvent, UserDataState> {
 
   UserDataBloc() : super(const UserDataState.initial()) {
     on<UserDataEvent>((event, emit) {
-      event.when(started: () {}, getUserData: () => _getUserData);
+      event.when(started: () {}, getUserData: () => getUserDataMethod());
     });
   }
 
-  _getUserData() {
+  getUserDataMethod() {
     emit(const UserDataState.getUserDataLoading());
     getUserData.call().then((value) {
       value.when(success: (data) {

@@ -14,12 +14,12 @@ class OrderHistoryBloc extends Bloc<OrderHistoryEvent, OrderHistoryState> {
     on<OrderHistoryEvent>((event, emit) {
       event.when(
         started: () {},
-        getOrdersHistory: () => _getOrdersHistory,
+        getOrdersHistory: () => getOrdersHistory,
       );
     });
   }
 
-  _getOrdersHistory() {
+  getOrdersHistory() {
     emit(const OrderHistoryState.getOrdersHistoryLoading());
     getOrdersHistoryUseCase.call().then((value) {
       value.when(success: (data) {
