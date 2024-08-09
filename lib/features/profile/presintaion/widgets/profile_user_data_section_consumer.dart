@@ -10,12 +10,17 @@ class ProfileUserDataSectionConsumer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<UserDataBloc,UserDataState>(
+    return BlocConsumer<UserDataBloc, UserDataState>(
       listener: (context, state) {
         print(state);
-
       },
-      builder: (context, state) => const ProfileUserDataSection(),
+      builder: (context, state) {
+        return state.maybeWhen(orElse: () => const SizedBox(),
+          getUserDataLoading: () => const CircularProgressIndicator(),
+          getUserDataFailure: (errorMessage) => Center(child:  Text(errorMessage)),
+          getUserDataSuccess: (userData) =>  ProfileUserDataSection(userEntity: userData,),
+        );
+      },
     );
   }
 }

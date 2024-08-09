@@ -15,6 +15,7 @@ class UserDataRepoImpl extends UserDataRepo{
   Future<ApiResult<UserEntity>> getUserData()async  {
     try{
       var userData=profileLocalDataSource.getUserData();
+      print(userData);
       if(userData!=null) {
         return ApiResult.success(userData);
       }

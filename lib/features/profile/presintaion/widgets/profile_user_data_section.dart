@@ -8,6 +8,7 @@ import 'package:internship/core/utils/styles.dart';
 import 'package:internship/core/widgets/custom_app_button.dart';
 import 'package:internship/core/widgets/custom_password_form_filed.dart';
 import 'package:internship/core/widgets/custom_text_form_filed.dart';
+import 'package:internship/features/auth/donmain/entityes/user_entity.dart';
 import 'package:internship/features/profile/presintaion/widgets/avatar_image.dart';
 import 'package:internship/features/profile/presintaion/widgets/expanded_item_widget.dart';
 
@@ -15,8 +16,9 @@ import 'package:internship/features/profile/presintaion/widgets/expanded_item_wi
 
 class ProfileUserDataSection extends StatefulWidget {
   const ProfileUserDataSection({
-    super.key,
+    super.key, required this.userEntity,
   });
+  final UserEntity userEntity;
 
   @override
   State<ProfileUserDataSection> createState() => _ProfileUserDataSectionState();
@@ -37,67 +39,70 @@ class _ProfileUserDataSectionState extends State<ProfileUserDataSection> {
   }
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: MediaQuery.of(context).size.height*.07,),
-        AvatarImage(image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s",),
-        const SizedBox(height: 10,),
-        Text("Samir Karam",style: Styles.mSemiBold36(context),),
-        const SizedBox(height: 20,),
-        ExpandedItemWidget(
-            controller: ExpansionTileController(),
-            icon: Icons.person,
-            shownText: AppStrings.changeMyInformation,
-            expandedItems: [
-              //the name text form field
-              CustomTextFormFiled(
-                validator: (value) => nameValidate(value),
-                controller: nameController,
-                labelText: AppStrings.name,
-                keyboardType: TextInputType.name,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
+    return Form(
+      key: formKey,
+      child: Column(
+        children: [
+          SizedBox(height: MediaQuery.of(context).size.height*.07,),
+          AvatarImage(image: widget.userEntity.image,),
+          const SizedBox(height: 10,),
+          Text(widget.userEntity.name,style: Styles.mSemiBold36(context),),
+          const SizedBox(height: 20,),
+          ExpandedItemWidget(
+              controller: ExpansionTileController(),
+              icon: Icons.person,
+              shownText: AppStrings.changeMyInformation,
+              expandedItems: [
+                //the name text form field
+                CustomTextFormFiled(
+                  validator: (value) => nameValidate(value),
+                  controller: nameController,
+                  labelText: AppStrings.name,
+                  keyboardType: TextInputType.name,
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
 
-              // age text form field
-              CustomTextFormFiled(
-                validator: (value) => ageValidate(value),
-                controller: ageController,
-                labelText: AppStrings.age,
-                keyboardType: TextInputType.number,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
+                // age text form field
+                CustomTextFormFiled(
+                  validator: (value) => ageValidate(value),
+                  controller: ageController,
+                  labelText: AppStrings.age,
+                  keyboardType: TextInputType.number,
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
 
-              //the email text form field
-              CustomTextFormFiled(
-                validator: (value) => emailValidate(value),
-                controller: emailController,
-                labelText: AppStrings.email,
-                keyboardType: TextInputType.emailAddress,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
+                //the email text form field
+                CustomTextFormFiled(
+                  validator: (value) => emailValidate(value),
+                  controller: emailController,
+                  labelText: AppStrings.email,
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
 
-              // password text form field
-              CustomPasswordFormFiled(controller: passwordController,validator: (value) => passwordValidate(value),),
-              const SizedBox(
-                height: 16,
-              ),
+                // password text form field
+                CustomPasswordFormFiled(controller: passwordController,validator: (value) => passwordValidate(value),),
+                const SizedBox(
+                  height: 16,
+                ),
 
-              //the update button
-              CustomAppButton(text: AppStrings.update,onPressed: (){
-                if(formKey.currentState!.validate()){
+                //the update button
+                CustomAppButton(text: AppStrings.update,onPressed: (){
+                  if(formKey.currentState!.validate()){
 
-                }
-              },)
+                  }
+                },)
 
 
-            ]),
-      ],
+              ]),
+        ],
+      ),
     );
   }
   @override
@@ -111,10 +116,10 @@ class _ProfileUserDataSectionState extends State<ProfileUserDataSection> {
   }
 
   void _initValues() {
-    emailController = TextEditingController();
+    emailController = TextEditingController()..text=widget.userEntity.email;
     passwordController = TextEditingController();
-    nameController = TextEditingController();
-    ageController = TextEditingController();
+    nameController = TextEditingController()..text=widget.userEntity.name;
+    ageController = TextEditingController()..text=widget.userEntity.age.toString();
     formKey = GlobalKey<FormState>();
   }
 }

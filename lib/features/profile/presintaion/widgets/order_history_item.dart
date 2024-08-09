@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:internship/core/utils/colors.dart';
+import 'package:internship/features/profile/domain/entites/order_history_entity.dart';
 
 class OrderHistoryItem extends StatelessWidget {
+  final OrderHistoryEntity orderHistoryEntity;
 
-  const OrderHistoryItem({super.key});
+  const OrderHistoryItem({super.key, required this.orderHistoryEntity});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,43 +14,43 @@ class OrderHistoryItem extends StatelessWidget {
         padding: const EdgeInsetsDirectional.symmetric(horizontal: 30,vertical: 10),
         decoration: BoxDecoration(
             color: AppColors.greyColor.withOpacity(.4), borderRadius: BorderRadius.circular(10)),
-        child:  const Column(
+        child:   Column(
           children: [
             Row(
               children: [
-                Text("Id"),
-                Spacer(),
-                Text("1236"),
+                const Text("Id"),
+                const Spacer(),
+                Text(orderHistoryEntity.eId),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               children: [
-                Text("Date"),
-                Spacer(),
-                Text("16-21-2065"),
+                const Text("Date"),
+                const Spacer(),
+                Text(orderHistoryEntity.eDate),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               children: [
-                Text("Time"),
-                Spacer(),
-                Text("22-6-2026"),
+                const Text("Status"),
+                const Spacer(),
+                Text(orderHistoryEntity.eStatus),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               children: [
-                Text("Price"),
-                Spacer(),
-                Text("60.0"),
+                const Text("Price"),
+                const Spacer(),
+                Text(orderHistoryEntity.eTotal),
               ],
             ),
           ],

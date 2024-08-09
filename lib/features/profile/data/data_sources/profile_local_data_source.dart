@@ -21,7 +21,7 @@ class ProfileLocalDataSourceImpl implements ProfileLocalDataSource {
   @override
   UserEntity? getUserData() {
     Box<UserEntity> box = Hive.box(Constants.kUserData);
-    UserEntity? userData = box.get( Constants.kUserData);
+    UserEntity? userData = box.values.first;
     return userData;
   }
 

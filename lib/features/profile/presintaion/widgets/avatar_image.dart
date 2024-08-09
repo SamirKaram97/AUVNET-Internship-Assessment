@@ -1,4 +1,5 @@
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class AvatarImage extends StatelessWidget {
@@ -16,19 +17,12 @@ class AvatarImage extends StatelessWidget {
     return Container(
       width: MediaQuery.sizeOf(context).width/3.2,
       height: MediaQuery.sizeOf(context).width/3.2,
-      decoration:   ShapeDecoration(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.grey, width: 2),
         image: DecorationImage(
-          image: NetworkImage(
-              image),
+          image: CachedNetworkImageProvider(image),
           fit: BoxFit.fill,
-        ),
-        shape: const OvalBorder(
-          side: BorderSide(
-            width: 3,
-            strokeAlign: BorderSide.strokeAlignOutside,
-            color: Color(0xFFAEAEAE),
-          ),
-
         ),
       ),
     );
