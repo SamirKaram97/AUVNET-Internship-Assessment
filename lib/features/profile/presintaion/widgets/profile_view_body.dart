@@ -32,10 +32,16 @@ class ProfileViewBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+
+            // sign out button
             SignOutButton(),
+
+            // user data section
             ProfileUserDataSectionConsumer(),
             Divider(),
-            ExpandedItemWidgetConsumer(),
+
+            // expanded item widget
+            OrderHistoryListConsumer(),
             Divider(),
           ],
         ),

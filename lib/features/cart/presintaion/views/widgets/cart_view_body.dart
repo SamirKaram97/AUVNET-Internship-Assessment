@@ -18,7 +18,10 @@ class CartViewBody extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
+          // list view form cart items
           CartItemsListView(cartProducts: cartProducts),
+
+          //order app button
           CustomAppButton(
             text: "${AppStrings.orderNow}  (\$ $totalAmount)",
             onPressed: totalAmount==0?null:() {

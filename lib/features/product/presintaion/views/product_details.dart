@@ -81,6 +81,8 @@ class ProductDetailsBody extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+
+            // Add To Cart Button
             IconButton(
               onPressed: () {
                 context.read<ProductCubit>().addRemoveProductCart(productEntity);

@@ -20,7 +20,7 @@ class HomeViewBodyConsumer extends StatelessWidget {
 
         return state.whenOrNull(
           getProductsLoading: () {
-            return Center(child: const CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           },
           getProductsSuccess: (products) {
             return HomeViewBody(products: products);

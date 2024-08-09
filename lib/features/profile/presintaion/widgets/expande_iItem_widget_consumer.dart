@@ -6,8 +6,8 @@ import 'package:internship/features/profile/presintaion/mangers/orders_history_b
 import 'package:internship/features/profile/presintaion/widgets/expanded_item_widget.dart';
 import 'package:internship/features/profile/presintaion/widgets/order_history_item.dart';
 
-class ExpandedItemWidgetConsumer extends StatelessWidget {
-  const ExpandedItemWidgetConsumer({
+class OrderHistoryListConsumer extends StatelessWidget {
+  const OrderHistoryListConsumer({
     super.key,
   });
 

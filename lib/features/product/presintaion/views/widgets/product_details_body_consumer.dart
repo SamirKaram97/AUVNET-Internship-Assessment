@@ -18,6 +18,7 @@ class ProductDetailsBodyConsumer extends StatelessWidget {
     return BlocConsumer<ProductCubit, ProductState>(
       listener: (context, state) {
         if (state is ProductAddToCartState) {
+
           showToast(state: ToastState.SUCCESS, text: "Added To Cart Successfully");
         }
         else if(state is ProductRemoveFromCartState)
