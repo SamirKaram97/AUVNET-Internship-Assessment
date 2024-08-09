@@ -9,5 +9,6 @@ abstract class Constants
   static const String kIsUserLoginKey="isUserLogin";
   static const String kUserData="userData";
   static const String kProductsData="ProductsData";
+  static const String kOrdersHistory="ordersHistory";
   static const String kCartProductsData="CartProductsData";
 }

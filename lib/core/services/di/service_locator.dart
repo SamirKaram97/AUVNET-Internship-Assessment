@@ -22,6 +22,7 @@ import 'package:internship/features/home/data/repos/home_repo_impl.dart';
 import 'package:internship/features/home/domain/entityes/product_entity.dart';
 import 'package:internship/features/home/domain/repos/home_repo.dart';
 import 'package:internship/features/home/domain/use_cases/get_products_use_case.dart';
+import 'package:internship/features/profile/domain/entites/order_history_entity.dart';
 
 import '../../../features/auth/donmain/use_cases/sign_in_use_case.dart';
 import '../shared_pref/shared_pref_singleton.dart';
@@ -67,9 +68,11 @@ Future<void> mainInitMethods() async {
   await Hive.initFlutter();
   Hive.registerAdapter(UserEntityAdapter());
   Hive.registerAdapter(ProductEntityAdapter());
+   Hive.registerAdapter(OrderHistoryEntityAdapter());
   await Hive.openBox<UserEntity>(Constants.kUserData);
   await Hive.openBox<ProductEntity>(Constants.kCartProductsData);
   await Hive.openBox<ProductEntity>(Constants.kProductsData);
+  await Hive.openBox<OrderHistoryEntity>(Constants.kOrdersHistory);
 
   Bloc.observer = MyBlocObserver();
   setupServiceLocator();

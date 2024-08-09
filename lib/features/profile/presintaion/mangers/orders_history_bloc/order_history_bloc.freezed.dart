@@ -286,6 +286,7 @@ mixin _$OrderHistoryState {
     required TResult Function() getOrdersHistoryLoading,
     required TResult Function(List<OrderHistoryEntity> orders)
         getOrdersHistorySuccess,
+    required TResult Function(String message) getOrdersHistoryFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -293,6 +294,7 @@ mixin _$OrderHistoryState {
     TResult? Function()? initial,
     TResult? Function()? getOrdersHistoryLoading,
     TResult? Function(List<OrderHistoryEntity> orders)? getOrdersHistorySuccess,
+    TResult? Function(String message)? getOrdersHistoryFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -300,6 +302,7 @@ mixin _$OrderHistoryState {
     TResult Function()? initial,
     TResult Function()? getOrdersHistoryLoading,
     TResult Function(List<OrderHistoryEntity> orders)? getOrdersHistorySuccess,
+    TResult Function(String message)? getOrdersHistoryFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -310,6 +313,8 @@ mixin _$OrderHistoryState {
         getOrdersHistoryLoading,
     required TResult Function(_GetOrdersHistorySuccess value)
         getOrdersHistorySuccess,
+    required TResult Function(_GetOrdersHistoryFailure value)
+        getOrdersHistoryFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -317,6 +322,7 @@ mixin _$OrderHistoryState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_GetOrdersHistoryLoading value)? getOrdersHistoryLoading,
     TResult? Function(_GetOrdersHistorySuccess value)? getOrdersHistorySuccess,
+    TResult? Function(_GetOrdersHistoryFailure value)? getOrdersHistoryFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -324,6 +330,7 @@ mixin _$OrderHistoryState {
     TResult Function(_Initial value)? initial,
     TResult Function(_GetOrdersHistoryLoading value)? getOrdersHistoryLoading,
     TResult Function(_GetOrdersHistorySuccess value)? getOrdersHistorySuccess,
+    TResult Function(_GetOrdersHistoryFailure value)? getOrdersHistoryFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -389,6 +396,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() getOrdersHistoryLoading,
     required TResult Function(List<OrderHistoryEntity> orders)
         getOrdersHistorySuccess,
+    required TResult Function(String message) getOrdersHistoryFailure,
   }) {
     return initial();
   }
@@ -399,6 +407,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? getOrdersHistoryLoading,
     TResult? Function(List<OrderHistoryEntity> orders)? getOrdersHistorySuccess,
+    TResult? Function(String message)? getOrdersHistoryFailure,
   }) {
     return initial?.call();
   }
@@ -409,6 +418,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? getOrdersHistoryLoading,
     TResult Function(List<OrderHistoryEntity> orders)? getOrdersHistorySuccess,
+    TResult Function(String message)? getOrdersHistoryFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -425,6 +435,8 @@ class _$InitialImpl implements _Initial {
         getOrdersHistoryLoading,
     required TResult Function(_GetOrdersHistorySuccess value)
         getOrdersHistorySuccess,
+    required TResult Function(_GetOrdersHistoryFailure value)
+        getOrdersHistoryFailure,
   }) {
     return initial(this);
   }
@@ -435,6 +447,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_GetOrdersHistoryLoading value)? getOrdersHistoryLoading,
     TResult? Function(_GetOrdersHistorySuccess value)? getOrdersHistorySuccess,
+    TResult? Function(_GetOrdersHistoryFailure value)? getOrdersHistoryFailure,
   }) {
     return initial?.call(this);
   }
@@ -445,6 +458,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_GetOrdersHistoryLoading value)? getOrdersHistoryLoading,
     TResult Function(_GetOrdersHistorySuccess value)? getOrdersHistorySuccess,
+    TResult Function(_GetOrdersHistoryFailure value)? getOrdersHistoryFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -503,6 +517,7 @@ class _$GetOrdersHistoryLoadingImpl implements _GetOrdersHistoryLoading {
     required TResult Function() getOrdersHistoryLoading,
     required TResult Function(List<OrderHistoryEntity> orders)
         getOrdersHistorySuccess,
+    required TResult Function(String message) getOrdersHistoryFailure,
   }) {
     return getOrdersHistoryLoading();
   }
@@ -513,6 +528,7 @@ class _$GetOrdersHistoryLoadingImpl implements _GetOrdersHistoryLoading {
     TResult? Function()? initial,
     TResult? Function()? getOrdersHistoryLoading,
     TResult? Function(List<OrderHistoryEntity> orders)? getOrdersHistorySuccess,
+    TResult? Function(String message)? getOrdersHistoryFailure,
   }) {
     return getOrdersHistoryLoading?.call();
   }
@@ -523,6 +539,7 @@ class _$GetOrdersHistoryLoadingImpl implements _GetOrdersHistoryLoading {
     TResult Function()? initial,
     TResult Function()? getOrdersHistoryLoading,
     TResult Function(List<OrderHistoryEntity> orders)? getOrdersHistorySuccess,
+    TResult Function(String message)? getOrdersHistoryFailure,
     required TResult orElse(),
   }) {
     if (getOrdersHistoryLoading != null) {
@@ -539,6 +556,8 @@ class _$GetOrdersHistoryLoadingImpl implements _GetOrdersHistoryLoading {
         getOrdersHistoryLoading,
     required TResult Function(_GetOrdersHistorySuccess value)
         getOrdersHistorySuccess,
+    required TResult Function(_GetOrdersHistoryFailure value)
+        getOrdersHistoryFailure,
   }) {
     return getOrdersHistoryLoading(this);
   }
@@ -549,6 +568,7 @@ class _$GetOrdersHistoryLoadingImpl implements _GetOrdersHistoryLoading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_GetOrdersHistoryLoading value)? getOrdersHistoryLoading,
     TResult? Function(_GetOrdersHistorySuccess value)? getOrdersHistorySuccess,
+    TResult? Function(_GetOrdersHistoryFailure value)? getOrdersHistoryFailure,
   }) {
     return getOrdersHistoryLoading?.call(this);
   }
@@ -559,6 +579,7 @@ class _$GetOrdersHistoryLoadingImpl implements _GetOrdersHistoryLoading {
     TResult Function(_Initial value)? initial,
     TResult Function(_GetOrdersHistoryLoading value)? getOrdersHistoryLoading,
     TResult Function(_GetOrdersHistorySuccess value)? getOrdersHistorySuccess,
+    TResult Function(_GetOrdersHistoryFailure value)? getOrdersHistoryFailure,
     required TResult orElse(),
   }) {
     if (getOrdersHistoryLoading != null) {
@@ -650,6 +671,7 @@ class _$GetOrdersHistorySuccessImpl implements _GetOrdersHistorySuccess {
     required TResult Function() getOrdersHistoryLoading,
     required TResult Function(List<OrderHistoryEntity> orders)
         getOrdersHistorySuccess,
+    required TResult Function(String message) getOrdersHistoryFailure,
   }) {
     return getOrdersHistorySuccess(orders);
   }
@@ -660,6 +682,7 @@ class _$GetOrdersHistorySuccessImpl implements _GetOrdersHistorySuccess {
     TResult? Function()? initial,
     TResult? Function()? getOrdersHistoryLoading,
     TResult? Function(List<OrderHistoryEntity> orders)? getOrdersHistorySuccess,
+    TResult? Function(String message)? getOrdersHistoryFailure,
   }) {
     return getOrdersHistorySuccess?.call(orders);
   }
@@ -670,6 +693,7 @@ class _$GetOrdersHistorySuccessImpl implements _GetOrdersHistorySuccess {
     TResult Function()? initial,
     TResult Function()? getOrdersHistoryLoading,
     TResult Function(List<OrderHistoryEntity> orders)? getOrdersHistorySuccess,
+    TResult Function(String message)? getOrdersHistoryFailure,
     required TResult orElse(),
   }) {
     if (getOrdersHistorySuccess != null) {
@@ -686,6 +710,8 @@ class _$GetOrdersHistorySuccessImpl implements _GetOrdersHistorySuccess {
         getOrdersHistoryLoading,
     required TResult Function(_GetOrdersHistorySuccess value)
         getOrdersHistorySuccess,
+    required TResult Function(_GetOrdersHistoryFailure value)
+        getOrdersHistoryFailure,
   }) {
     return getOrdersHistorySuccess(this);
   }
@@ -696,6 +722,7 @@ class _$GetOrdersHistorySuccessImpl implements _GetOrdersHistorySuccess {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_GetOrdersHistoryLoading value)? getOrdersHistoryLoading,
     TResult? Function(_GetOrdersHistorySuccess value)? getOrdersHistorySuccess,
+    TResult? Function(_GetOrdersHistoryFailure value)? getOrdersHistoryFailure,
   }) {
     return getOrdersHistorySuccess?.call(this);
   }
@@ -706,6 +733,7 @@ class _$GetOrdersHistorySuccessImpl implements _GetOrdersHistorySuccess {
     TResult Function(_Initial value)? initial,
     TResult Function(_GetOrdersHistoryLoading value)? getOrdersHistoryLoading,
     TResult Function(_GetOrdersHistorySuccess value)? getOrdersHistorySuccess,
+    TResult Function(_GetOrdersHistoryFailure value)? getOrdersHistoryFailure,
     required TResult orElse(),
   }) {
     if (getOrdersHistorySuccess != null) {
@@ -722,5 +750,158 @@ abstract class _GetOrdersHistorySuccess implements OrderHistoryState {
   List<OrderHistoryEntity> get orders;
   @JsonKey(ignore: true)
   _$$GetOrdersHistorySuccessImplCopyWith<_$GetOrdersHistorySuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetOrdersHistoryFailureImplCopyWith<$Res> {
+  factory _$$GetOrdersHistoryFailureImplCopyWith(
+          _$GetOrdersHistoryFailureImpl value,
+          $Res Function(_$GetOrdersHistoryFailureImpl) then) =
+      __$$GetOrdersHistoryFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$GetOrdersHistoryFailureImplCopyWithImpl<$Res>
+    extends _$OrderHistoryStateCopyWithImpl<$Res, _$GetOrdersHistoryFailureImpl>
+    implements _$$GetOrdersHistoryFailureImplCopyWith<$Res> {
+  __$$GetOrdersHistoryFailureImplCopyWithImpl(
+      _$GetOrdersHistoryFailureImpl _value,
+      $Res Function(_$GetOrdersHistoryFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$GetOrdersHistoryFailureImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetOrdersHistoryFailureImpl implements _GetOrdersHistoryFailure {
+  const _$GetOrdersHistoryFailureImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'OrderHistoryState.getOrdersHistoryFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetOrdersHistoryFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetOrdersHistoryFailureImplCopyWith<_$GetOrdersHistoryFailureImpl>
+      get copyWith => __$$GetOrdersHistoryFailureImplCopyWithImpl<
+          _$GetOrdersHistoryFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getOrdersHistoryLoading,
+    required TResult Function(List<OrderHistoryEntity> orders)
+        getOrdersHistorySuccess,
+    required TResult Function(String message) getOrdersHistoryFailure,
+  }) {
+    return getOrdersHistoryFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getOrdersHistoryLoading,
+    TResult? Function(List<OrderHistoryEntity> orders)? getOrdersHistorySuccess,
+    TResult? Function(String message)? getOrdersHistoryFailure,
+  }) {
+    return getOrdersHistoryFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getOrdersHistoryLoading,
+    TResult Function(List<OrderHistoryEntity> orders)? getOrdersHistorySuccess,
+    TResult Function(String message)? getOrdersHistoryFailure,
+    required TResult orElse(),
+  }) {
+    if (getOrdersHistoryFailure != null) {
+      return getOrdersHistoryFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_GetOrdersHistoryLoading value)
+        getOrdersHistoryLoading,
+    required TResult Function(_GetOrdersHistorySuccess value)
+        getOrdersHistorySuccess,
+    required TResult Function(_GetOrdersHistoryFailure value)
+        getOrdersHistoryFailure,
+  }) {
+    return getOrdersHistoryFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_GetOrdersHistoryLoading value)? getOrdersHistoryLoading,
+    TResult? Function(_GetOrdersHistorySuccess value)? getOrdersHistorySuccess,
+    TResult? Function(_GetOrdersHistoryFailure value)? getOrdersHistoryFailure,
+  }) {
+    return getOrdersHistoryFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_GetOrdersHistoryLoading value)? getOrdersHistoryLoading,
+    TResult Function(_GetOrdersHistorySuccess value)? getOrdersHistorySuccess,
+    TResult Function(_GetOrdersHistoryFailure value)? getOrdersHistoryFailure,
+    required TResult orElse(),
+  }) {
+    if (getOrdersHistoryFailure != null) {
+      return getOrdersHistoryFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetOrdersHistoryFailure implements OrderHistoryState {
+  const factory _GetOrdersHistoryFailure(final String message) =
+      _$GetOrdersHistoryFailureImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$GetOrdersHistoryFailureImplCopyWith<_$GetOrdersHistoryFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
