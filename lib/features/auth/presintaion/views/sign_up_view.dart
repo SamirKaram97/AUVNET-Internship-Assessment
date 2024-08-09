@@ -15,7 +15,7 @@ class SignUpView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocProvider(
-        create: (context) => SignUpBloc(getIt<SignUpUseCase>()),
+        create: (context) => getIt<SignUpBloc>(),
         child: const SignUpViewBodyConsumer(),
       ),
     );

@@ -17,6 +17,7 @@ import 'package:internship/features/profile/presintaion/widgets/expanded_item_wi
 import 'package:internship/features/profile/presintaion/widgets/order_history_item.dart';
 import 'package:internship/features/profile/presintaion/widgets/profile_user_data_section.dart';
 import 'package:internship/features/profile/presintaion/widgets/profile_user_data_section_consumer.dart';
+import 'package:internship/features/profile/presintaion/widgets/sign_out_button.dart';
 
 class ProfileViewBody extends StatelessWidget {
   const ProfileViewBody({
@@ -42,29 +43,3 @@ class ProfileViewBody extends StatelessWidget {
     );
   }
 }
-
-class SignOutButton extends StatelessWidget {
-  const SignOutButton({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: (){
-        BlocProvider.of<UserDataBloc>(context).add(UserDataEvent.signOut(context));
-      },
-      child: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Align(
-          alignment: AlignmentDirectional.centerEnd,
-          child: CircleAvatar(
-            backgroundColor: AppColors.deepPurpleColor,
-            maxRadius: 25,
-            child: Icon(Icons.logout, color: Colors.white,),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-

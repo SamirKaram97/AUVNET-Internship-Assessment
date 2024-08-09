@@ -20,7 +20,7 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SignInBloc(getIt<SignInUseCase>()),
+      create: (context) => getIt<SignInBloc>(),
       child: const Scaffold(
         body: SignInViewBodyBlocConsumer(),
       ),

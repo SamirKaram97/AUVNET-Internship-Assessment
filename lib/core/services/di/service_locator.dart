@@ -11,6 +11,8 @@ import 'package:internship/features/auth/data/repos/auth_repo_impl.dart';
 import 'package:internship/features/auth/donmain/entityes/user_entity.dart';
 import 'package:internship/features/auth/donmain/repo/auth_rep.dart';
 import 'package:internship/features/auth/donmain/use_cases/sign_up_use_case.dart';
+import 'package:internship/features/auth/presintaion/mangers/sign_in/sign_in_bloc.dart';
+import 'package:internship/features/auth/presintaion/mangers/sign_up/sign_up_bloc.dart';
 import 'package:internship/features/cart/data/data_sources/remote_data_source.dart';
 import 'package:internship/features/cart/data/repos/cart_rep_impl.dart';
 import 'package:internship/features/cart/domain/repos/cart_repo.dart';
@@ -83,6 +85,8 @@ void setupServiceLocator() async {
   // Registering BLoC
   getIt.registerFactory<UserDataBloc>(() => UserDataBloc());
   getIt.registerFactory<OrderHistoryBloc>(() => OrderHistoryBloc());
+  getIt.registerFactory<SignInBloc>(() => SignInBloc(getIt<SignInUseCase>()));
+  getIt.registerFactory<SignUpBloc>(() => SignUpBloc(getIt<SignUpUseCase>()));
 }
 
 Future<void> mainInitMethods() async {
